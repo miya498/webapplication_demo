@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}報告書管理アプリ{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>報告書管理アプリ</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">ホーム</a></li>
+                <li><a href="{{ url_for('new_report') }}">報告書作成</a></li>
+                <!-- ログアウトなどのリンクを追加 -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 報告書管理アプリ</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

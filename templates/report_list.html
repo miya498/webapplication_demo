@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}報告書一覧 - 報告書管理アプリ{% endblock %}
+
+{% block content %}
+<section class="report-list">
+    <h2>報告書一覧</h2>
+    <ul>
+        {% for report in reports %}
+        <li>
+            <strong>{{ report.title }}</strong> - {{ report.date }}
+            <p>{{ report.content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

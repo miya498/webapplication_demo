@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}報告書作成 - 報告書管理アプリ{% endblock %}
+
+{% block content %}
+<section class="report-form">
+    <h2>新しい報告書を作成する</h2>
+    <form action="{{ url_for('new_report') }}" method="post">
+        <label for="report-title">タイトル:</label>
+        <input type="text" id="report-title" name="report-title" required>
+        
+        <label for="report-date">日付:</label>
+        <input type="date" id="report-date" name="report-date" required>
+        
+        <label for="report-content">内容:</label>
+        <textarea id="report-content" name="report-content" rows="4" required></textarea>
+        
+        <button type="submit">作成する</button>
+    </form>
+</section>
+{% endblock %}

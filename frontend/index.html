@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報告書管理アプリ</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルを読み込む -->
+</head>
+<body>
+    <header>
+        <h1>報告書管理アプリ</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">報告書作成</a></li>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="report-form">
+            <h2>新しい報告書を作成する</h2>
+            <form id="new-report-form">
+                <label for="report-title">タイトル:</label>
+                <input type="text" id="report-title" name="report-title" required>
+                
+                <label for="report-date">日付:</label>
+                <input type="date" id="report-date" name="report-date" required>
+                
+                <label for="report-content">内容:</label>
+                <textarea id="report-content" name="report-content" rows="4" required></textarea>
+                
+                <button type="submit">作成する</button>
+            </form>
+        </section>
+        
+        <section class="report-list">
+            <h2>報告書一覧</h2>
+            <ul id="report-list">
+                <!-- ここに報告書一覧が動的に表示される -->
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 報告書管理アプリ</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- JavaScriptファイルを読み込む -->
+</body>
+</html>
